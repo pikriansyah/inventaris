@@ -1,23 +1,43 @@
-<!-- resources/views/dashboard.blade.php -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 </head>
 <body>
-    <h1>Selamat datang, {{ Auth::user()->name }}!</h1>  <!-- nama diubah menjadi name -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Hallo, {{ Auth::user()->name }}</a> 
+            <div class="navbar-links">
+                <a href="{{ route('dashboard') }}">Home</a>
+                <a href="{{ route('supplier.index') }}">Lihat Barang</a>
+                <a href="{{ route('login') }}">Logout</a>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Navigasi ke fitur tambah barang dan tambah supplier -->
-    <a href="{{ route('barang.create') }}">Tambah Barang</a><br>
-    <a href="{{ route('supplier.create') }}">Tambah Supplier</a><br>
-    <a href="{{ route('barang.index') }}">Lihat Barang</a><br>
+    <div class="container">
+        <div class="nav-links">
+            <a href="{{ route('barang.store') }}" class="card">
+                <img src="{{ asset('images/travel.png') }}" alt="Tambah Barang" class="card-img">
+                <div class="card-text">Tambah Barang</div>
+            </a>
+            <a href="{{ route('supplier.create') }}" class="card">
+                <img src="{{ asset('images/delivery.png') }}" alt="Tambah Supplier" class="card-img">
+                <div class="card-text">Tambah Supplier</div>
+            </a>
+            <a href="{{ route('kategori.create') }}" class="card">
+                <img src="{{ asset('images/kategori.png') }}" alt="Tambah Kategori" class="card-img">
+                <div class="card-text">Tambah Kategori</div>
+            </a>
+        </div>
+    </div>
 
-    <!-- Logout Form -->
-    <form action="{{ route('logout') }}" method="POST">
-        @csrf
-        <button type="submit">Logout</button>
-    </form>
+    <footer>
+        <p>WEBSITE INVENTARIS ANDA</p>
+    </footer>
+    
 </body>
 </html>
