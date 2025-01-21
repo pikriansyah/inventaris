@@ -1,0 +1,204 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.navbar-links a:hover {
+    color: #163591;
+}
+
+/* Container and form styling */
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling */
+.label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input and Textarea Fields */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.textarea-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 80px; /* Set minimum height */
+}
+
+/* Adjust width of the input fields */
+.input-field, .textarea-field {
+    width: 100%;
+}
+
+/* Button Styling */
+.submit-btn {
+    background-color: #28a745; /* Warna hijau */
+    color: white;
+    padding: 12px 20px;  /* Menambahkan padding agar tombol lebih besar */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 50%; /* Sesuaikan lebar tombol (opsional) */
+    margin: 20px auto; /* Menjaga tombol berada di tengah dan memberi jarak atas-bawah */
+    display: block; /* Agar tombol bisa diatur berada di tengah */
+    text-align: center; /* Agar teks tombol tetap di tengah */
+}
+
+.submit-btn:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat hover */
+}
+
+/* Tabel Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Header Tabel */
+table th {
+    background-color: #33b727;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Data Tabel */
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Baris Genap Tabel */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efek Hover pada Baris Tabel */
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popup-content {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #155724;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #218838;
+}

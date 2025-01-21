@@ -27,8 +27,13 @@ Route::resource('barang', BarangController::class);
 // routes/web.php
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+Route::get('kategori/tambah', [KategoriController::class, 'create'])->name('kategori.tambah');
+Route::post('kategori/store', [KategoriController::class, 'store'])->name('kategori.store');
+// Route untuk menampilkan semua kategori
+Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
 
-
+Route::get('/supplier/tambah', [SupplierController::class, 'create'])->name('supplier.tambah');
+Route::get('/supplier', [SupplierController::class, 'index'])->name('supplier.index');
 
 Route::get('/', function () {
     return view('welcome');

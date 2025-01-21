@@ -20,10 +20,4 @@ class Supplier extends Model
         'kontak',
         'alamat',
     ];
-
-    // Relasi dengan model SupplierBarang
-    public function supplierbarangs()
-    {
-        return $this->hasMany(SupplierBarang::class, 'suppliers_id');
-    }
 }
